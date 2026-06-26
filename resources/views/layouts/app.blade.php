@@ -42,6 +42,10 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
                 Movement Orders
             </a>
+            <a href="{{ route('api-explorer') }}" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm {{ request()->routeIs('api-explorer') ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-gray-700' }}">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                API Explorer
+            </a>
         </nav>
         <div class="p-4 border-t border-gray-700 text-xs text-gray-500">
             OOP / SOLID / DDD Architecture

@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\LocationController;
 use App\Http\Controllers\Web\ProductController;
 use App\Http\Controllers\Web\InventoryController;
 use App\Http\Controllers\Web\MovementOrderWebController;
+use App\Http\Controllers\Web\ApiExplorerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => redirect()->route('dashboard'));
@@ -19,3 +20,5 @@ Route::get('inventory', [InventoryController::class, 'index'])->name('inventory.
 Route::resource('movement-orders', MovementOrderWebController::class)->except(['show', 'edit', 'update']);
 Route::patch('movement-orders/{movementOrder}/complete', [MovementOrderWebController::class, 'complete'])->name('movement-orders.complete');
 Route::patch('movement-orders/{movementOrder}/cancel', [MovementOrderWebController::class, 'cancel'])->name('movement-orders.cancel');
+
+Route::get('api-explorer', [ApiExplorerController::class, 'index'])->name('api-explorer');
